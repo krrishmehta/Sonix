@@ -1,0 +1,1131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 7vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    min-height: inherit;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.web-name-icon{
+    margin-left: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 17px;
+    border-bottom: 2px solid orangered;
+    border-top: 2px solid orangered;
+}
+
+.web-name-icon span:nth-child(3){
+    color: orangered;
+    font-family: serif;
+}
+
+.nav-links{
+    width: fit-content;
+    height: fit-content;
+}
+
+.nav-links ul{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links ul li{
+    margin-right: 20px;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 450;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.wrap{
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.wrap::-webkit-scrollbar{
+    display: none;
+}
+
+.wrap .container1{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+}
+
+.container1 .first-half-container1{
+    width: fit-content;
+    height: fit-content;
+}
+
+.first-half-container1 .now-playing-text{
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.music-cover{
+    width: 200px;
+    height: 200px;
+    /* background-color: aqua; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    margin-right: 40px; 
+}
+
+.music-cover img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.second-half-container1{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+}
+
+.second-half-container1 .song-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.second-half-container1 .artist-name{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.second-half-container1 .song-progress-bar{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.second-half-container1 .progress-bar{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    height: 3px;
+    background-color: #d3d3d3;
+    color: orangered;
+    outline: none;
+}
+
+.second-half-container1 .progress-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid orangered;
+    cursor: pointer;
+}
+
+.second-half-container1 .song-timing{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.second-half-container1 .music-controls{
+    width: 64%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.second-half-container1 .music-controls button:nth-child(1){
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+}
+
+.second-half-container1 .music-controls button:nth-child(3){
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+}
+
+.second-half-container1 .music-controls button:nth-child(2){
+    width: 40px;
+    height: 40px;
+    background-color: orangered;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+    border: none;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    outline: none;
+}
+
+.wrap .container2{
+    position: absolute;
+    width: 50%;
+    height: 93vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    min-height: inherit;
+    align-items: flex-end;
+}
+
+.wrap .room-id-credentials{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    align-items: flex-end;
+    margin-top: 40px;
+    margin-right: 80px;
+}
+
+.wrap .room-id-credentials span{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 3px;
+    margin-right: 15px;
+}
+
+.container2 input{
+    width: 180px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    color: orangered;
+    background-color: #d3d3d3;
+}
+
+.container2 .room-pass-credential{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    min-height: inherit;
+    align-items: flex-end;
+    margin-right: 80px;
+}
+
+.room-pass-credential span{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 3px;
+    margin-right: 13px;
+}
+
+.room-pass-icon{
+    width: fit-content;
+    height: fit-content;
+}
+
+#password-icon{
+    position: inherit;
+    margin-left: -27px;
+}
+
+.container2 .connected-users-list{
+    margin-top: 60px;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    align-items: flex-end;
+    margin-right: 80px;
+}
+
+.connected-users-list span{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    margin-right: 18px;
+}
+
+.connected-users-list .participant{
+    width: 70%;
+    height: 90%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.participant::-webkit-scrollbar{
+    display: none;
+}
+
+.container2 .leave-room{
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    min-height: inherit;
+    align-items: flex-start;
+}
+
+.leave-room button{
+    width: 150px;
+    height: 30px;
+    margin-left: 20%;
+    border:none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.participant .card{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.participant .profile{
+    width: 30px;
+    height: 30px;
+    background-color: orangered;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.participant .name{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+}
+
+.wrap .container3{
+    position: absolute;
+    top: 93vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container3 .songs-list{
+    position: absolute;
+    top: 13vh;
+    width: 85%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.songs-list::-webkit-scrollbar{
+    display: none;
+}
+
+.songs-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+}
+
+/* Header row */
+.songs-list .header {
+    display: grid;
+    grid-template-columns: 90px 376.74px 195.41px; /* adjust sizes */
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    width: 68%;
+    border-bottom: 1.5px solid black;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+/* Song rows */
+.songs-list li {
+    display: grid;
+    grid-template-columns: 50px 60px 376.34px 195.41px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.songs-list li:hover {
+    background: #f9f9f9;
+}
+
+.songs-list li.active {
+    color: orangered;
+}
+
+.songs-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+li div.title, 
+li div.artist {
+  white-space: nowrap;        /* keep text in one line */
+  overflow: hidden;           /* hide overflow text */
+  text-overflow: ellipsis;    /* show "..." */
+}
+
+.container3 .search-bar{
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    top: 5vh;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    min-height: inherit;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.search-bar input{
+    width: 220px;
+    height: 30px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid orangered;
+    padding: 0px 5px 0px 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+}
+
+@media (min-width: 320px) and (max-width: 375px){
+    .web-name-icon{
+        font-size: 14px;
+        margin-left: 6px;
+    }
+
+    .nav-links ul li{
+        margin-right: 14px;
+        font-size: 13px;
+    }
+
+    .wrap .container1{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .wrap .container2{
+        position: absolute;
+        width: 100%;
+        height: 93vh;
+        top: 173vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        min-height: inherit;
+        align-items: flex-end;
+    }
+
+    .wrap .container3{
+        position: absolute;
+        top: 93vh;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container1 .first-half-container1{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+        align-items: center;
+    }
+
+    .first-half-container1 .now-playing-text{
+        width: 100%;
+        height: fit-content;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+
+    .music-cover{
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+        margin-right: 0px; 
+    }
+
+    .music-cover img{
+        border-radius: 5px;
+    }
+
+    .second-half-container1{
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .second-half-container1 .song-title{
+        width: 70%;
+        font-size: 20px;
+        white-space: nowrap;        /* keep text in one line */
+        overflow: hidden;           /* hide overflow text */
+        text-overflow: ellipsis;
+    }
+
+    .second-half-container1 .artist-name{
+        width: 70%;
+        font-size: 13px;
+        white-space: nowrap;        /* keep text in one line */
+        overflow: hidden;           /* hide overflow text */
+        text-overflow: ellipsis;
+    }
+
+    .second-half-container1 .song-progress-bar{
+        margin-top: 0px;
+    }
+
+    .second-half-container1 .progress-bar{
+        height: 2px;
+    }
+
+    .second-half-container1 .progress-bar::-webkit-slider-thumb{
+        width: 13px;
+        height: 13px;
+        border: 3px solid orangered;
+    }
+
+    .second-half-container1 .song-timing{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .second-half-container1 .music-controls{
+        width: 60%;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(1){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(3){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(2){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .container3 .songs-list{
+        position: absolute;
+        top: 0vh;
+        width: 100%;
+        height: fit-content;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .songs-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .songs-list .header {
+        display: none;
+    }
+
+    /* Song rows */
+    .songs-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .songs-list li .index {
+        display: none; /* hide index */
+    }
+
+    .songs-list li .song-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .songs-list li .song-info .title {
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songs-list li .song-info .artist {
+        font-size: 11px;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songs-list li .duration {
+        margin-left: auto;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .songs-list li:hover {
+        background: #f9f9f9;
+    }
+
+    .songs-list li.active {
+        color: orangered;
+    }
+
+    .songs-list img {
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+    }
+
+    li div.title, 
+    li div.artist {
+    white-space: nowrap;        /* keep text in one line */
+    overflow: hidden;           /* hide overflow text */
+    text-overflow: ellipsis;    /* show "..." */
+    }
+
+    .container3 .search-bar{
+        display: none;
+    }
+
+    .search-bar input{
+        width: 220px;
+        height: 30px;
+        box-sizing: border-box;
+        outline: none;
+        border: 2px solid orangered;
+        padding: 0px 5px 0px 5px;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+    }
+
+    .container2 .room-pass-credential{
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .wrap .room-id-credentials{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: inherit;
+        align-items: flex-end;
+        margin-top: 40px;
+        margin-right: 10px;
+    }
+
+    .wrap .room-id-credentials span{
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 3px;
+        margin-right: 10px;
+    }
+
+    .container2 input{
+        width: 190px;
+        height: 26px;
+    }
+
+    .room-pass-credential span{
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    #password-icon{
+        font-size: 15px;
+    }
+
+    .container2 .connected-users-list{
+        margin-top: 60px;
+        width: 100%;
+        height: 180px;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .connected-users-list span{
+        font-size: 15px;
+        margin-right: 0px;
+    }
+
+    .connected-users-list .participant{
+        width: 90%;
+        height: 100%;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .container2 .leave-room{
+        margin-top: 60px;
+        justify-content: center;
+    }
+
+    .leave-room button{
+        width: 120px;
+        height: 25px;
+        margin-left: 0%;
+        font-size: 13px;
+    }
+
+    .participant .card{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        min-height: inherit;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .participant .profile{
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 425px){
+    .web-name-icon{
+        font-size: 14px;
+        margin-left: 6px;
+    }
+
+    .nav-links ul li{
+        margin-right: 14px;
+        font-size: 13px;
+    }
+
+    .wrap .container1{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .wrap .container2{
+        position: absolute;
+        width: 100%;
+        height: 93vh;
+        top: 173vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        min-height: inherit;
+        align-items: flex-end;
+    }
+
+    .wrap .container3{
+        position: absolute;
+        top: 93vh;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container1 .first-half-container1{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+        align-items: center;
+    }
+
+    .first-half-container1 .now-playing-text{
+        width: 100%;
+        height: fit-content;
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+
+    .music-cover{
+        width: 250px;
+        height: 250px;
+        border-radius: 5px;
+        margin-right: 0px; 
+    }
+
+    .music-cover img{
+        border-radius: 5px;
+    }
+
+    .second-half-container1{
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .second-half-container1 .song-title{
+        width: 60%;
+        font-size: 20px;
+        white-space: nowrap;        /* keep text in one line */
+        overflow: hidden;           /* hide overflow text */
+        text-overflow: ellipsis;
+    }
+
+    .second-half-container1 .artist-name{
+        width: 60%;
+        font-size: 13px;
+        white-space: nowrap;        /* keep text in one line */
+        overflow: hidden;           /* hide overflow text */
+        text-overflow: ellipsis;
+    }
+
+    .second-half-container1 .song-progress-bar{
+        margin-top: 0px;
+    }
+
+    .second-half-container1 .progress-bar{
+        height: 2px;
+    }
+
+    .second-half-container1 .progress-bar::-webkit-slider-thumb{
+        width: 13px;
+        height: 13px;
+        border: 3px solid orangered;
+    }
+
+    .second-half-container1 .song-timing{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .second-half-container1 .music-controls{
+        width: 60%;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(1){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(3){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .second-half-container1 .music-controls button:nth-child(2){
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .container3 .songs-list{
+        position: absolute;
+        top: 0vh;
+        width: 100%;
+        height: fit-content;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .songs-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .songs-list .header {
+        display: none;
+    }
+
+    /* Song rows */
+    .songs-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .songs-list li .index {
+        display: none; /* hide index */
+    }
+
+    .songs-list li .song-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .songs-list li .song-info .title {
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songs-list li .song-info .artist {
+        font-size: 11px;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .songs-list li .duration {
+        margin-left: auto;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .songs-list li:hover {
+        background: #f9f9f9;
+    }
+
+    .songs-list li.active {
+        color: orangered;
+    }
+
+    .songs-list img {
+        width: 50px;
+        height: 50px;
+        border-radius: 6px;
+    }
+
+    li div.title, 
+    li div.artist {
+    white-space: nowrap;        /* keep text in one line */
+    overflow: hidden;           /* hide overflow text */
+    text-overflow: ellipsis;    /* show "..." */
+    }
+
+    .container3 .search-bar{
+        display: none;
+    }
+
+    .search-bar input{
+        width: 220px;
+        height: 30px;
+        box-sizing: border-box;
+        outline: none;
+        border: 2px solid orangered;
+        padding: 0px 5px 0px 5px;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+    }
+
+    .container2 .room-pass-credential{
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .wrap .room-id-credentials{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: inherit;
+        align-items: flex-end;
+        margin-top: 40px;
+        margin-right: 10px;
+    }
+
+    .wrap .room-id-credentials span{
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 3px;
+        margin-right: 10px;
+    }
+
+    .container2 input{
+        width: 190px;
+        height: 26px;
+    }
+
+    .room-pass-credential span{
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    #password-icon{
+        font-size: 15px;
+    }
+
+    .container2 .connected-users-list{
+        margin-top: 60px;
+        width: 100%;
+        height: 180px;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .connected-users-list span{
+        font-size: 15px;
+        margin-right: 0px;
+    }
+
+    .connected-users-list .participant{
+        width: 90%;
+        height: 100%;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .container2 .leave-room{
+        margin-top: 60px;
+        justify-content: center;
+    }
+
+    .leave-room button{
+        width: 120px;
+        height: 25px;
+        margin-left: 0%;
+        font-size: 13px;
+    }
+
+    .participant .card{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        min-height: inherit;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .participant .profile{
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+    }
+}

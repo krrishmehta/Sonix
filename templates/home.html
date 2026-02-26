@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonix-Home</title>
+    <link rel="stylesheet" href="/statics/css/home.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="web-name-icon">
+            <span>S</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>X</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="welcome-sonix">
+                <span>Welcome to Sonix</span><br>
+                <span class="sonix-info">Synchronize your music across devices</span>
+            </div>
+            <div class="room-details-input-field">
+                <div class="join-sync-room">
+                    <input type="text" name="room-id" id="room-id" placeholder="room ID | Password" required>
+                    <button class="join" onclick="joinRoom()">Join</button>
+                </div>
+                <div class="create-sync-room">
+                    <span class="create-txt">Create</span><br>
+                    <input type="text" name="room-pass" id="room-pass" class="room-pass" placeholder="Set a password" required>
+                    <button class="create" id="create" onclick="createroom()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/statics/js/index.js"></script>
+</body>
+</html>

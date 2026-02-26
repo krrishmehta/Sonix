@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonix-Admin</title>
+    <link rel="stylesheet" href="../statics/css/adminpage.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="web-name-icon">
+            <span>S</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>X</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Music</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container">
+            <div class="songtitle">
+                <input type="text" class="title" id="title" placeholder="song title" required>
+            </div>
+            <div class="artistname">
+                <input type="text" id="artist" class="artist" placeholder="artist name" required>
+            </div>
+            <div class="uploadsong">
+                <input type="file" name="song-file" id="songfile" accept="audio/*">
+                <div class="outline-progress" style="width:210px;height:10px;background-color:#d3d3d3;margin-bottom:20px;">
+                    <div class="progress" style="width:0%;height:10px;background-color:orangered;" id="progress"></div>
+                </div>
+            </div>
+            <div class="select-song-storage">
+                <select name="song-storage" id="song-storage">
+                    <option value="storage-1">Firebase</option>
+                    <option value="storage-2">Supabase</option>
+                </select>
+            </div>
+            <div class="submit-btn">
+                <button class="submit" id="submit-data" onclick="upload()">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function upload(){
+        const song = document.getElementById("title").value;
+        const artist = document.getElementById("artist").value;
+        const fileinput = document.getElementById("songfile");
+        const storage = document.getElementById("song-storage").value;
+        const progress = document.getElementById("progress");
+        const formdata = new FormData();
+
+        progress.style.width = "0%";
+
+        let file = fileinput.files[0];
+        if (!file) return alert("No file selected. Please select file");
+
+        const audio = document.createElement("audio");
+        audio.src = URL.createObjectURL(file);
+
+        audio.addEventListener("loadedmetadata",async () => {
+            const duration = Math.floor(audio.duration);
+            
+            formdata.append("song",song);
+            formdata.append("artist",artist);
+            formdata.append("file",file);
+            formdata.append("storage",storage);
+            formdata.append("duration",duration);
+
+           const xhr = new XMLHttpRequest();
+           xhr.open("POST",`${window.location.href}/metadata`);
+           xhr.upload.onprogress = function(e){
+            if(e.lengthComputable){
+                let percent = (e.loaded/e.total) * 100;
+                progress.style.width = `${percent}%`;
+            }
+           }
+
+           xhr.onload = function(){
+            let data = JSON.parse(xhr.responseText);
+            if(data.success){
+                alert("Upload successful");
+            }
+            else{
+                alert("Upload failed!");
+            }
+           };
+           xhr.send(formdata);
+        })
+    }
+</script>
+</html>

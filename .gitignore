@@ -1,0 +1,4 @@
+models/certificate.json
+*.json
+.env
+alembic.ini

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="/statics/css/sync-playing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="popup-msg" style="width:100%;height:100vh;display:flex;flex-direction:column;text-align:center;justify-content:center;min-height:inherit;align-items:center;position:absolute;z-index:11111;background-color:white;" id="popup-display">
+        <div class="msg" style="font-family: 'Poppins', sans-serif;font-size:15px;margin-bottom:20px;">This website is under maintenance. So please co-orporate if any bugs or error occur. We are wroking on all features.</div>
+        <div class="button"><button style="width:120px;height:28px;outline:none;background-color:orangered;color:white;border:none;font-family: 'Poppins', sans-serif;border-radius:10px;" id="ok-btn" onclick="popupRedirect()">OK</button></div>
+    </div>
+    <div class="nav-bar">
+        <div class="web-name-icon">
+            <span>S</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>X</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container1">
+            <div class="first-half-container1">
+                <div class="now-playing-text">Now Playing</div>
+                <div class="music-cover"><img src="../statics/images/music-cover1.png" alt="music cover" id="music-cover"></div>
+            </div>
+            <div class="second-half-container1">
+                <div class="song-title"><span id="song-title">Yeh Fitoor Mera</span></div>
+                <div class="artist-name"><span id="artist-name">Arijit Singh, Ved Sharma, KK</span></div>
+                <div class="song-progress-bar">
+                    <audio class="audioplayer" id="audioplayer" controls hidden>
+                        <source src="" type="audio/mp3" id="audiosrc">
+                    </audio>
+                    <input type="range" name="progress-bar" id="progress-bar" value="0" class="progress-bar" min="0" max="100">
+                    <div class="song-timing">
+                        <span class="current-time" id="current-time">0:00</span>
+                        <span class="song-end-time" id="song-end-time">0:00</span>
+                    </div>
+                </div>
+                <div class="music-controls">
+                    <button class="backward-btn" id="backward-btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="play-pause-btn" id="play-pause-btn"><i class="fa-solid fa-play"></i></button>
+                    <button class="forward-btn" id="forward-btn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="room-id-credentials">
+                <span>Room ID</span>
+                <input type="text" name="room_id" id="room-id" class="room-id">
+            </div>
+            <div class="room-pass-credential">
+                <span>Room Password</span>
+                <div class="room-pass-icon">
+                    <input type="password" name="room-pass" id="room-pass" class="room-pass">
+                    <i class="fa-solid fa-eye" id="password-icon" onclick="tooglepass()"></i>
+                </div>
+            </div>
+            <div class="connected-users-list">
+                <span>Participant</span>
+                <div class="participant" id="participant">
+                    <div class="card">
+                        <div class="profile" id="profile">K</div>
+                        <div class="name">krrish_m10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="leave-room">
+                <button class="leave-room-btn" onclick="redirect()">Leave Room</button>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="search-bar">
+                <input type="text" name="search" id="search" class="search" placeholder="search">
+            </div>
+            <div class="songs-list">
+                <div class="header">
+                    <div>#</div>
+                    <div>Track</div>
+                    <div>Duration</div>
+                </div>
+                <ul id="songList">
+                    {% for song in songs %}
+                        <li data-src={{ song.url }}>
+                            <div class="index">{{song.id}}</div>
+                            <div class="poster"><img src="{{song.img_url}}" alt="Poster"></div>
+                            <div class="song-info">
+                                <div class="title">{{song.name}}</div>
+                                <div class="artist">{{song.artist}}</div>
+                            </div>
+                            <div class="duration">{{song.duration}}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/statics/js/main.js"></script>
+</html>

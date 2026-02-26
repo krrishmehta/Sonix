@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 7vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    min-height: inherit;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.web-name-icon{
+    margin-left: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 17px;
+    border-bottom: 2px solid orangered;
+    border-top: 2px solid orangered;
+}
+
+.web-name-icon span:nth-child(3){
+    color: orangered;
+    font-family: serif;
+}
+
+.wrap{
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    background-color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+}
+
+.wrap .container{
+    width: 280px;
+    height: 360px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    min-height: inherit;
+    align-items: center;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-text{
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.input-fields{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+.username-field{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+}
+
+.password-field{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+}
+
+.email-field{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    min-height: inherit;
+    align-items: center;
+}
+
+input{
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-family: "Poppins", sans-serif;
+    padding: 5px 35px 1px 5px;
+}
+
+#user-icon{
+    position: absolute;
+    right: 15px;
+}
+
+#password-icon{
+    position: absolute;
+    right: 15px;
+}
+
+#email-icon{
+    position: absolute;
+    right: 15px;
+}
+
+.additional-links{
+    width: 94%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    cursor: default;
+}
+
+.login-btn{
+    margin-top: 60px;
+}
+
+.signup-btn{
+    margin-top: 60px;
+}
+
+button{
+    width: 120px;
+    height: 26px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    border: 3px solid orange;
+}

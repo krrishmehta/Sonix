@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonix</title>
+    <link rel="stylesheet" href="/statics/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="web-name-icon">
+            <span>S</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>X</span>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="container" id="container">
+            <h2 class="login-text">Login</h2>
+            <div class="input-fields">
+                <div class="username-field">
+                    <input type="text" class="username" id="username" placeholder="username" required>
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                </div>
+                <div class="password-field">
+                    <input type="password" class="password" id="password" placeholder="password" required>
+                    <i class="fa-solid fa-eye" id="password-icon" onclick="tooglepass()"></i>
+                </div>
+            </div>
+            <div class="additional-links">
+                <span onclick="fetchcode('signup')">Don't have account?</span>
+                <span>Forgot password</span>
+            </div>
+            <div class="login-btn">
+                <button type="submit" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/statics/js/index.js"></script>
+</html>
